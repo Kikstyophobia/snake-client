@@ -15,6 +15,24 @@ const connect = function () {
     console.log(data);
   });
 
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server.")
+  });
+
+  conn.on("connect", () => {
+    conn.write("Name: CHC");
+  });
+
+  conn.on("connect", () => {
+    conn.write("Move: up");
+  });
+
+  conn.on("connect", () => {
+    setTimeout(() => {
+    conn.write("Move: left")
+    }, 1000);
+  });
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
