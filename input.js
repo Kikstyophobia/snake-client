@@ -1,4 +1,5 @@
 let connection;
+const { IP, PORT } = require('./constants');
 
 const setupInput = function (conn) {
   connection = conn;
